@@ -1,20 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"net/http"
 )
 
 func main() {
-	// var myInt int
-	// myInt = 42
+	http.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Println("Hello Mars!")
+	}))
 
-	var myFloat32 float32 = 42.
-	fmt.Println(myFloat32)
-
-	myString := "Hello Go"
-	fmt.Println(myString)
-
-	myComplex := complex(2, 3)
-	fmt.Println(myComplex)
-	fmt.Println(real(myComplex))
+	log.Println("Now server is running on port 3000")
+	http.ListenAndServe(":3000", nil)
 }
