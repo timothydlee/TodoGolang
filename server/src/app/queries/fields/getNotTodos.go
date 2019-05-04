@@ -3,7 +3,7 @@ package queries
 import (
 	"context"
 	"github.com/graphql-go/graphql"
-	"github.com/mongodb/mongo-go-driver/bson"
+	bson "github.com/mongodb/mongo-go-driver/bson"
 
 	"app/data"
 	types "app/types"
@@ -14,6 +14,7 @@ type todoStruct struct {
 	DESCRIPTION	string `json:'description"`
 }
 
+// GetNotTodos is the graphql field which we will pull notTodos from.
 var GetNotTodos = &graphql.Field {
 	Type:			graphql.NewList(types.NotTodo),
 	Description:	"Get all the not todos",
