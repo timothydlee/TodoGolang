@@ -50,5 +50,5 @@ var GetNotTodos = &graphql.Field {
 		}
 		
 		return todosList, nil
-	}
+	},
 }
