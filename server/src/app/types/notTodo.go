@@ -4,7 +4,7 @@ import (
 	"github.com/graphql-go/graphql"
 )
 
-// This is NotTodo comment
+//NotToDo represents something we're not going to do.
 var NotTodo = graphql.NewObject(graphql.ObjectConfig {
 	Name: "NotTodo",
 	Fields: graphql.Fields {
